@@ -6,45 +6,60 @@ body {
     margin: 0;
     padding: 0;
 }
+
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+ 
 .top-image {
     display: flex;
+    gap: 20px;
 }
 .left-slider {
     width: 1060px;
     height: 650px;
     overflow: hidden;
+    border-radius: 30px;
     display: flex;
-    border:1px solid red;
+}
+.left-slider img {
+    width: 1060px;
+    height: 650px;
 }
 .right-slider {
     width: 440px;
     height: 650px;
-    /* overflow: hidden; */
+    overflow: hidden;
+    border-radius: 30px;
     display: flex;
-    border:1px solid red;
+}
+.right-slider img {
+    width: 440px;
+    height: 650px;
 }
 /* 슬라이드 */
-/* .left-slides {
+.left-slides , .right-slides{
             display: flex;
-          width: calc(100% * 2);
+          width: calc(100% * 4);
            height: 100%;
             animation-name:slideRoll;
-            animation-duration: 0.3s;
-            animation: slideRoll 0.3s infinite;
-            animation: slideRoll 4s 2 ease-in-out ;
-        } */
-        /* @keyframes slideRoll {
+            animation-duration: 9s;
+            
+            animation: slideRoll 9s infinite;
+            animation: slideRoll 6s 2 forwards linear ;
+        }
+        @keyframes slideRoll {
             0% {transform: translateX(0);}
-            40% {transform: translateX(-50%);}
-            60% {transform: translateX(-50%);}
-            100% {transform: translateX(-100%);}
+            13% {transform: translateX(-25%);}
+            26% {transform: translateX(-25%);}
+            39% {transform: translateX(-50%);}
+            52% {transform: translateX(-50%);}
+            65% {transform: translateX(-75%);}
+            100% {transform: translateX(-75%);}
 
-        } */
+        }
     .right-slides {
         display: flex;
     }    
@@ -106,27 +121,36 @@ h1 {
     height: 360px;
 }
 
-.a_to_z {
-    display: flex;
-}
 .sub-gift-list {
     display: flex;
 }
+
+.a_to_z {
+    display: flex;
+    gap: 20px;
+}
+.a_to_z img {
+    margin-bottom: 20px;
+}
+
 .notice  {
-    width: 635px;
-    height: 150px;
+    width: 695px;
+    height: 110px;
+    margin-bottom: 20px;
+    text-align: left;
     background-color: #e83828;
     color:#fff;
     border-radius: 20px;
-
+    padding:30px 0 37px 60px
 }
 .faq  {
-    width: 635px;
-    height: 150px;
+    width: 695px;
+    height: 110px;
+    margin-bottom: 20px;
     background-color: #ffcf48;
     color:#000;
     border-radius: 20px;
-
+    padding:30px 0 37px 60px
 }
 
 
