@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.top-image {
+    display: flex;
+}
+.left-slider {
+    width: 1060px;
+    height: 650px;
+    overflow: hidden;
+    display: flex;
+    border:1px solid red;
+}
+.right-slider {
+    width: 440px;
+    height: 650px;
+    /* overflow: hidden; */
+    display: flex;
+    border:1px solid red;
+}
+/* 슬라이드 */
+/* .left-slides {
+            display: flex;
+          width: calc(100% * 2);
+           height: 100%;
+            animation-name:slideRoll;
+            animation-duration: 0.3s;
+            animation: slideRoll 0.3s infinite;
+            animation: slideRoll 4s 2 ease-in-out ;
+        } */
+        /* @keyframes slideRoll {
+            0% {transform: translateX(0);}
+            40% {transform: translateX(-50%);}
+            60% {transform: translateX(-50%);}
+            100% {transform: translateX(-100%);}
+
+        } */
+    .right-slides {
+        display: flex;
+    }    
+/* main-icon */
+.main-menu-list {
+    display: flex;
+}
+.main-icon-box img{
+    width: 168px;
+    height: 168px;
+}
+
+.main-recommend img , .main-gift-set img{
+    width: 58px;
+    height: 58px;
+}
+.sub-gift-list li:nth-child(1){
+    width: 535px;
+    height: 666px;
+}
+h1 {
+    text-align: center;
+}
+.sub-menu-list {
+    display: flex;
+}
+.sub-menu-wrap {
+    display: flex;
+    
+    
+}
+
+
+.sub-menu-left-list li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 58px;
+    background: #a68bff;
+    color:#fff;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+
+.sub-left-icon-box img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 48px;
+    height: 48px;
+}
+.sub-icon-box img{
+    width: 290px;
+    height: 360px;
+}
+
+.a_to_z {
+    display: flex;
+}
+.sub-gift-list {
+    display: flex;
+}
+.notice  {
+    width: 635px;
+    height: 150px;
+    background-color: #e83828;
+    color:#fff;
+    border-radius: 20px;
+
+}
+.faq  {
+    width: 635px;
+    height: 150px;
+    background-color: #ffcf48;
+    color:#000;
+    border-radius: 20px;
+
+}
+
+
+/* chat */
+.sub-menu-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px; /* 좌우간 간격 */
+}
+
+/* 왼쪽 메뉴 영역 */
+.sub-menu-left {
+    width: 260px;
+}
+
+/* ul은 높이를 고정하면 안됨 */
+.sub-menu-left-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* 선물세트 첫번째 이미지만 크기를변동하기
+    아마도 별도로 div로 해야될것 같음.
+    슬라이드 좀더 연구해보기
+    공지사항등 좀더 정리하고/ 버튼색깔변경
+    좀더 하단 이미지및 추가로 이미지찾아 보완
+    하단 플렉스까지 됬고..원기회복쪽 정리
+    일단은 동일하게 하고 첫번째만 예외적용할것
+ */
