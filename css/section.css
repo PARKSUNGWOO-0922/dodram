@@ -69,14 +69,13 @@ main {
     display: flex;
 }
 .main-icon-box img{
-    display: block;
     width: 168px;
     height: 168px;
-    background: none;
-    
-    
 }
-
+/*기존이미지 변경시 js 사용하던지 div로 태그변경해서 해볼것*/
+.main-icon-box img:nth-last-of-type(2):hover {
+    background-image: url(../images/main_sub_btns_hover_img02_new.png);
+}
 .main-recommend img , .main-gift-set img{
     width: 58px;
     height: 58px;
