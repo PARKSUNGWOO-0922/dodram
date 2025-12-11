@@ -6,84 +6,17 @@
 <title>메인 섹션(Sungwoo)</title>
 
 <link rel="stylesheet" href="./css/section.css">
- <link rel="stylesheet" href="./css/header.css">
- <link rel="stylesheet" href="./css/footer.css">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
 </head>
 <body>
 
 <main>
-    <!-- 헤더 -->
-     <div id="header">
-        <div class="inner">
-            <!-- logo -->
-            <h1 class="logo"><a href="index.html"><img src="images/0c3d6c35bd0388d73a8ca987211f0061_31100.svg"
-                        alt="도드람로고"></a></h1>
-            <!-- top link -->
-            <div class="top_link">
-                <a href="#">로그인</a>
-                <a href="#">회원가입</a>
-                <a href="#">고객센터</a>
-                <a href=""><img src="images/mu_coupon_icon.svg" alt="쿠폰"></a>
-                <a href=""><img src="images/mu_mypage_icon.svg" alt="마이페이지"></a>
-                <a href=""><img src="images/mu_basket_icon.svg" alt="장바구니"></a>
-            </div> <!-- //top_link -->
-        </div> <!-- //inner -->
-
-
-        <!-- GNB -->
-        <nav id="gnb">
-            <ul class="main">
-                <li><a href="">핫세일</a></li>
-                <li><a href="">신제품</a></li>
-                <li><a href="">베스트</a></li>
-                <li><a href="">신선정육</a>
-                    <ul class="sub">
-                        <li><a href="">한우</a></li>
-                        <li><a href="">한돈</a></li>
-                        <li><a href="">삼겹살</a></li>
-                        <li><a href="">목심</a></li>
-                        <li><a href="">갈비</a></li>
-                        <li><a href="">등심/안심</a></li>
-                        <li><a href="">앞다리/뒷다리</a></li>
-                        <li><a href="">특수부위/기타</a></li>
-                    </ul>
-                </li>
-                <li><a href="">간편식</a>
-                    <ul class="sub">
-                        <li><a href="">국/탕/찌개</a></li>
-                        <li><a href="">돈까스/튀김</a></li>
-                        <li><a href="">햄/소시지</a></li>
-                        <li><a href="">양념/볶음</a></li>
-                        <li><a href="">안주/야식</a></li>
-                    </ul>
-                </li>
-                <li><a href="">선물세트</a>
-                    <ul class="sub">
-                        <li><a href="">한돈</a></li>
-                        <li><a href="">한우</a></li>
-                        <li><a href="">간편식</a></li>
-                    </ul>
-                </li>
-                <li><a href="">브랜드관</a>
-                    <ul class="sub">
-                        <li><a href="">도드람한돈</a></li>
-                        <li><a href="">THE짙은</a></li>
-                        <li><a href="">캔돈</a></li>
-                    </ul>
-                </li>
-            </ul>
-                <input class="search" name="message" id="" placeholder="찾으시는 제품이 있으신가요?" required>
-        </nav>
-    </div> <!-- //header -->
-     <!-- 헤더end -->
-
-        
             <!-- 왼쪽 이미지 -->
         <section class="top-image ">
             <div class="left-banner left-slider ">
                 <ul class="content-box left-slides">
+                    <li><img src="./images/636df30c3aef1cd9391a65bab9dec200_67572.png" alt="케이크 이미지"></li>
                     <li><img src="./images/636df30c3aef1cd9391a65bab9dec200_67572.png" alt="케이크 이미지"></li>
                     <li><img src="./images/636df30c3aef1cd9391a65bab9dec200_67572.png" alt="케이크 이미지"></li>
                     <li><img src="./images/636df30c3aef1cd9391a65bab9dec200_67572.png" alt="케이크 이미지"></li>
@@ -97,6 +30,7 @@
                     <li><img src="./images/65180321a1d6b8c518cecd83b2d5f95b_62703.jpg" alt="택배사고접수"></li>
                     <li><img src="./images/154940ff7b76c7f146eb5e3c00af7757_89428.png" alt="이름짓기콘테스트"></li>
                     <li><img src="./images/1091334089b9e1d9e591e75602b54106_10073.png" alt="선착순리뷰이벤트"></li>
+                    <li><img src="./images/b01c2ce25e34f80d499f0488d034b00b_90109.png" alt="올해의브랜드상"></li>
                 </ul>
             </div>
         </section>
@@ -111,15 +45,16 @@
     <!-- 메뉴 박스 -->
     <div class="side-menu" id="sidemenu">
         <div><img src="./images/scl_bt.gif" alt="">우측클릭바</div>
-        <ul class="menu-list">
-
-            <li><div class="icon-box"><img src="./images/scl_icon01.png"></div><span>공지사항</span></li>
-            <li><div class="icon-box"><img src="./images/scl_icon02.png"></div><span>고객센터</span></li>
-            <li><div class="icon-box"><img src="./images/scl_icon03.png"></div><span>배송조회</span></li>
-            <li><div class="icon-box"><img src="./images/scl_icon04.png"></div><span>마이쇼핑</span></li>
-            <li><div class="icon-box"><img src="./images/scl_icon05.png"></div><span>장바구니</span></li>
-            <li><div class="icon-box"><img src="https://dodrammall.com/data/skin/front/mo_designart/img/da_image/scl_icon_cou.png"></div><span>장바구니</span></li>
-        </ul>
+        <div class="menu-list-container">
+            <ul class="menu-list">
+                <li><div class="icon-box"><img src="./images/scl_icon01.png"></div><span>공지사항</span></li>
+                <li><div class="icon-box"><img src="./images/scl_icon02.png"></div><span>고객센터</span></li>
+                <li><div class="icon-box"><img src="./images/scl_icon03.png"></div><span>배송조회</span></li>
+                <li><div class="icon-box"><img src="./images/scl_icon04.png"></div><span>마이쇼핑</span></li>
+                <li><div class="icon-box"><img src="./images/scl_icon05.png"></div><span>장바구니</span></li>
+                <li><div class="icon-box"><img src="https://dodrammall.com/data/skin/front/mo_designart/img/da_image/scl_icon_cou.png"></div><span>장바구니</span></li>
+            </ul>
+        </div>
 
     </div>
     <div class="main-menu" id="mainmenu">
@@ -189,50 +124,6 @@
 
     <div><img src="./images/b9057f38a6d6c303c3e027ecea3f1137_14398.svg" alt="맛있는온도법칙"></div>
 
-    <!-- footer -->
- <div id="footer">
-        <div class="inner">
-            <div class="inner_info">
-                <a href="index.html"><img src="images/0c3d6c35bd0388d73a8ca987211f0061_35031.svg" alt="하단 로고"></a>
-                <div class="footer_bottom">
-                    <div class="service">
-                        <a herf="https://www.dodrammall.com/service/agreement.php">이용약관</a>
-                        <a herf="https://www.dodrammall.com/service/private.php">개인정보처리방침</a>
-                        <a herf="https://www.dodrammall.com/service/guide.php">쇼핑몰이용안내</a>
-                        <a herf="https://www.dodrammall.com/service/index.php">고객센터</a>
-                    </div> <!-- //service -->
-                <div class="info">
-                    <p>주소:경기도 이천시 부발읍 경충대로 1917 도드람테마파크 상호:도드람양돈협동조합<br>조합장:박광욱 사업자등록번호: 126-82-10806<a
-                            href="mailto:mall@dodram.co.kr">전자우편:mall@dodram.co.kr</a><br> 개인정보보호책임자:홍은숙<a
-                            herf="tel:1551-3349">대표번호:1551-3349</a> 팩스:031-636-0763<br>통신판매업
-                        신고번호:2018-경기이천-0257호<br><br> copyright©dodrammall.com All Right Reserved. Hosting by NHN고도(주)
-                </div> <!-- //info -->
-                </div> <!-- //footer_bottom -->
-            </div> <!-- //inner_info -->
-            <div class="inner_box">
-                <div class="call_box">
-                    <div class="call_center">
-                        <h2>CALL CENTER</h3>
-                        <h2>1551-3349</h2>
-                    </div>
-                        <ul class="bank_time">
-                            <li>평일 AM 09:00 ~ PM 06:00</li>
-                            <li>점심 PM 12:00 ~ PM 01:00</li>
-                            <li>(휴무 토 / 일 / 공휴일)</li>
-                        </ul>
-                </div>
-                <div class="bank_box">
-                    <div class="bank_info">
-                        <h3>BANK INFO</h3>
-                        <h3>농협 351-1042-7399-13</h3>
-                    </div>
-                        <ul class="bank_name">
-                            <li>예금주: 도드람양돈협동조합</li>
-                        </ul>
-                </div>
-            </div> <!-- //inner_box -->
-        </div> <!-- //inner -->
-    </div> <!-- //footer -->
-     <!-- footer end -->
+   
 
 </main><!--.main-container-->
