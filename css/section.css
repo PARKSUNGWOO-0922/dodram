@@ -12,7 +12,10 @@ ul {
     padding: 0;
     margin: 0;
 }
- 
+main {
+    width: 1520px;
+    margin: 0 auto;
+}
 .top-image {
     display: flex;
     gap: 20px;
@@ -25,7 +28,7 @@ ul {
     display: flex;
 }
 .left-slider img {
-    width: 1060px;
+    width: 990px;
     height: 650px;
 }
 .right-slider {
@@ -41,35 +44,37 @@ ul {
 }
 /* 슬라이드 */
 .left-slides , .right-slides{
-            display: flex;
-          width: calc(100% * 4);
-           height: 100%;
-            animation-name:slideRoll;
-            animation-duration: 9s;
-            
-            animation: slideRoll 9s infinite;
-            animation: slideRoll 6s 2 forwards linear ;
-        }
-        @keyframes slideRoll {
-            0% {transform: translateX(0);}
-            13% {transform: translateX(-25%);}
-            26% {transform: translateX(-25%);}
-            39% {transform: translateX(-50%);}
-            52% {transform: translateX(-50%);}
-            65% {transform: translateX(-75%);}
-            100% {transform: translateX(-75%);}
-
-        }
-    .right-slides {
-        display: flex;
-    }    
+    display: flex;
+    width: calc(100% * 4);
+    height: 100%;
+    animation-name:slideRoll;
+    animation-duration: 9s;
+    animation: slideRoll 9s infinite;
+    animation: slideRoll 6s 2 forwards linear ;
+}
+@keyframes slideRoll {
+    0% {transform: translateX(0);}
+    13% {transform: translateX(-25%);}
+    26% {transform: translateX(-25%);}
+    39% {transform: translateX(-50%);}
+    52% {transform: translateX(-50%);}
+    65% {transform: translateX(-75%);}
+    100% {transform: translateX(-75%);}
+}
+.right-slides {
+    display: flex;
+}    
 /* main-icon */
 .main-menu-list {
     display: flex;
 }
 .main-icon-box img{
+    display: block;
     width: 168px;
     height: 168px;
+    background: none;
+    
+    
 }
 
 .main-recommend img , .main-gift-set img{
@@ -88,11 +93,7 @@ h1 {
 }
 .sub-menu-wrap {
     display: flex;
-    
-    
 }
-
-
 .sub-menu-left-list li {
     position: relative;
     display: flex;
@@ -179,4 +180,8 @@ h1 {
     좀더 하단 이미지및 추가로 이미지찾아 보완
     하단 플렉스까지 됬고..원기회복쪽 정리
     일단은 동일하게 하고 첫번째만 예외적용할것
+    
+    가로폭수정하고 푸터와 간격조정
+    이미지배경(노란)없애는 방법?
+    공지사항 클릭버튼 해결?
  */
