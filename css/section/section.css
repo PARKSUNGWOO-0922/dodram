@@ -1,13 +1,13 @@
 @charset "utf-8";
 
-body {
+main body {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
     margin: 0;
     padding: 0;
 }
 
-ul {
+main ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -16,34 +16,34 @@ main {
     width: 1520px;
     margin: 0 auto;
 }
-.top-image {
+main .top-image {
     display: flex;
     gap: 20px;
 }
-.left-slider {
+main .left-slider {
     width: 990px;
     height: 650px;
     overflow: hidden;
     border-radius: 30px;
     display: flex;
 }
-.left-slider img {
+main .left-slider img {
     width: 990px;
     height: 650px;
 }
-.right-slider {
+main .right-slider {
     width: 440px;
     height: 650px;
     overflow: hidden;
     border-radius: 30px;
     display: flex;
 }
-.right-slider img {
+main .right-slider img {
     width: 440px;
     height: 650px;
 }
 /* 슬라이드 */
-.left-slides , .right-slides{
+main .left-slides , .right-slides{
     display: flex;
     width: calc(100% * 5);
     height: 100%;
@@ -65,39 +65,52 @@ main {
     78.0% {transform: translateX(-80%);}
     100% {transform: translateX(-80%);}
 }
-.right-slides {
+main .right-slides {
     display: flex;
 }    
 /* main-icon */
-.main-menu-list {
+main .main-menu-list {
+    background: transparent;
     display: flex;
 }
-.main-icon-box img{
+main .main-icon-box img{
     width: 168px;
     height: 168px;
 }
 /*기존이미지 변경시 js 사용하던지 div로 태그변경해서 해볼것*/
-.main-icon-box img:nth-last-of-type(2):hover {
-    background-image: url(../images/main_sub_btns_hover_img02_new.png);
-}
-.main-recommend img , .main-gift-set img{
+
+main .main-recommend img , .main-gift-set img{
     width: 58px;
     height: 58px;
 }
-.sub-gift-list li:nth-child(1){
+main .sub-gift-list li:nth-child(1){
     width: 535px;
     height: 666px;
 }
-h1 {
+main h1 , main p {
     text-align: center;
 }
-.sub-menu-list {
+main .sub-menu-list {
     display: flex;
 }
-.sub-menu-wrap {
+main .sub-menu-wrap {
     display: flex;
 }
-.sub-menu-left-list li {
+main .sub-menu-left-list li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 58px;
+    color:#000;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    padding-left: 40px;
+    outline: 1px solid #bbb;
+} 
+main .sub-menu-left-list li:nth-child(1) {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -113,31 +126,68 @@ h1 {
 }
 
 
-.sub-left-icon-box img {
+main .sub-left-icon-box img {
     position: absolute;
     top: 5px;
     left: 5px;
     width: 48px;
     height: 48px;
 }
-.sub-icon-box img{
+main .sub-icon-box img{
     width: 290px;
     height: 360px;
 }
+main .menu-list{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    border:1px solid red;
+}
+main .menu-list img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+main .menu-list li:nth-of-type(1) .icon-box img  {
+    top: 10px;
+    left: 20px;
+}
+main .menu-list li:nth-of-type(2) .icon-box img  {
+    top: 10px;
+    left: 90px;
+}
+main .menu-list li:nth-of-type(3) .icon-box img  {
+    top: 10px;
+    left: 170px;
+}
+main .menu-list li:nth-of-type(4) .icon-box img  {
+    top: 90px;
+    left: 20px;
+}
+main .menu-list li:nth-of-type(5) .icon-box img  {
+    top: 90px;
+    left: 90px;
+}
+main .menu-list li:nth-of-type(6) .icon-box img  {
+    top: 170px;
+    left: 20px;
+}
 
-.sub-gift-list {
+
+main .sub-gift-list {
     display: flex;
 }
 
-.a_to_z {
+
+main .a_to_z {
     display: flex;
     gap: 20px;
 }
-.a_to_z img {
+main .a_to_z img {
     margin-bottom: 20px;
 }
 
-.notice  {
+main .notice  {
     width: 695px;
     height: 110px;
     margin-bottom: 20px;
@@ -147,7 +197,7 @@ h1 {
     border-radius: 20px;
     padding:30px 0 37px 60px
 }
-.faq  {
+main .faq  {
     width: 695px;
     height: 110px;
     margin-bottom: 20px;
@@ -159,19 +209,19 @@ h1 {
 
 
 /* chat */
-.sub-menu-wrap {
+main .sub-menu-wrap {
     display: flex;
     align-items: flex-start;
     gap: 40px; /* 좌우간 간격 */
 }
 
 /* 왼쪽 메뉴 영역 */
-.sub-menu-left {
+main .sub-menu-left {
     width: 260px;
 }
 
 /* ul은 높이를 고정하면 안됨 */
-.sub-menu-left-list {
+main .sub-menu-left-list {
     list-style: none;
     padding: 0;
     margin: 0;
