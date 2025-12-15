@@ -1,7 +1,7 @@
  const noticeData = [
-  {id: 177, title: "[공지] 2025년 8월 광복절 배송 안내",writer: "관리자",date: "2025-01-10",checkNum:"175" },
-  {id: 178, title: "[공지] 여름철 아이스팩",writer: "관리자",date: "2025-01-20",checkNum:"15" },
-  {id: 179, title: "[공지] 일부 상품 판매 중단 안내",writer: "관리자",date: "2025-01-30",checkNum:"275" },
+  {id: 177, title: "[공지] 2025년 8월 광복절 배송 안내",writer: "관리자",date: "2025-08-10",checkNum:"175",addr:"notice_sub1.html" },
+  {id: 178, title: "[공지] 여름철 아이스팩",writer: "관리자",date: "2025-07-20",checkNum:"15" ,addr:"notice_sub2.html"},  
+  {id: 179, title: "[공지] 일부 상품 판매 중단 안내",writer: "관리자",date: "2025-01-30",checkNum:"275",addr:"notice_sub3.html" },
   {id: 180, title: "[공지] 도드람몰 마일리지 적립 제외 상품",writer: "관리자",date: "2025-02-11",checkNum:"375" },
   {id: 181, title: "♥도드람 창립 34주년 기념 할인행사",writer: "관리자",date: "2025-03-10",checkNum:"575" },
   {id: 182, title: "GO SURFYY FIND DODRAM ST",writer: "관리자",date: "2025-03-12",checkNum:"177" },
