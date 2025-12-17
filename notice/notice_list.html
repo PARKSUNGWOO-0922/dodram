@@ -18,25 +18,27 @@
   <script src="assets/js/layout.js"></script>
   
 </head>
-<body>
-  <div class="container">
-    <!-- 제목 -->
-    <h1 class="title">공지사항</h1>
-
-    <!-- 검색창 -->
-    <div class="search-box">
-      <input type="text" placeholder="검색어를 입력해 주세요.">
-      <button>검색</button>
+<main>
+  <body>
+    <div class="container">
+      <!-- 제목 -->
+      <h1 class="title">공지사항</h1>
+  
+      <!-- 검색창 -->
+      <div class="search-box">
+        <input type="text" placeholder="검색어를 입력해 주세요.">
+        <button>검색</button>
+      </div>
+  
+      <!-- 공지사항 테이블 -->
+      <div id="notice-area"></div>
+      <!-- 페이지네이션 -->
+      <div class="pagination">
+      </div>
+  
     </div>
-
-    <!-- 공지사항 테이블 -->
-    <div id="notice-area"></div>
-    <!-- 페이지네이션 -->
-    <div class="pagination">
-    </div>
-   
-  </div>
-    <script src="/assets/js/notice_data.js"></script>
-  <script src="/assets/js/notice_table.js"></script>
-</body>
+      <script src="/assets/js/notice_data.js"></script>
+    <script src="/assets/js/notice_table.js"></script>
+  </body>
+</main>
 </html>

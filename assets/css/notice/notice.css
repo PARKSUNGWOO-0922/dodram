@@ -1,48 +1,44 @@
-/* 기본 스타일 */
-html, body {
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    font-size: 16px;
-}
 
-.notice-table a {
+
+main .notice-table a {
   text-decoration: none;
   color:#000;
 }
-.notice-table a:hover {
+main .notice-table a:hover {
   text-decoration: underline;
   text-decoration-color: #000;
   text-decoration-thickness: 1.5px;
 }
 
-.container  {
+main .container  {
   max-width: 1260px;
   margin: 0 auto;
 }
-.sub-container{
+main .sub-container{
   max-width: 1260px;
   margin: 0 auto;
 }
 
 /* 제목 */
-.title {
+main .title {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 /* 검색창 */
-.search-box {
+main .search-box {
   text-align: right;
   margin-bottom: 20px;
 }
 
-.search-box input[type="text"] {
+main .search-box input[type="text"] {
   padding: 6px 10px;
   width: 250px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
-.search-box button {
+main .search-box button {
   padding: 6px 12px;
   background-color: #666;
   color: #fff;
@@ -52,43 +48,43 @@ html, body {
 }
 
 /* 테이블 */
-.notice-table ,.notice-sub-table{
+main .notice-table ,main .notice-sub-table{
   width: 100%;
   border-collapse: collapse;
 }
-.notice-table th:nth-of-type(1) {width: 71px;}
-.notice-table th:nth-of-type(2) {width: 540px;}
-.notice-table th:nth-of-type(3) {width: 162px;}
-.notice-table th:nth-of-type(4) {width: 86px;}
-.notice-table th:nth-of-type(5) {width: 207px;}
+main .notice-table th:nth-of-type(1) {width: 71px;}
+main .notice-table th:nth-of-type(2) {width: 540px;}
+main .notice-table th:nth-of-type(3) {width: 162px;}
+main .notice-table th:nth-of-type(4) {width: 86px;}
+main .notice-table th:nth-of-type(5) {width: 207px;}
 
 /* .notice-sub-table td:nth-of-type(1) {width: 90%;} */
 
-.notice-table th, .notice-table td  {
+main .notice-table th, main .notice-table td  {
   text-align: center;
   padding: 12px 10px;
   border-bottom: 1px solid #ccc;
 }
-.notice-sub-table th, .notice-sub-table td{
+main .notice-sub-table th, main .notice-sub-table td{
   text-align: start;
   padding: 12px 10px;
   border-bottom: 1px solid #ccc;
 }
-.notice-sub-table td:last-child {
+main .notice-sub-table td:last-child {
   text-align: right;
 }
-.notice-table th , .notice-sub-table th{
+main .notice-table th , main .notice-sub-table th{
   font-weight: bold;
   background-color: #e4e4e4;
 }
 
 /* 페이지네이션 */
-.pagination {
+main .pagination {
   margin-top: 10px;
   text-align: center;
 }
 
-.pagination a {
+main .pagination a {
   display: inline-block;
   padding: 4px 10px;
   margin: 0 4px;
@@ -98,16 +94,16 @@ html, body {
   border-radius: 50px;
 }
 
-.pagination .active {
+main .pagination .active {
   background-color: #bbb;
 }
 
-.notice-image {
+main .notice-image {
   display:block;
   margin: 0;
 }
 
-p {
+main p {
   width: 100px;
   height: 25px;
   background-color: #666 ;
@@ -117,7 +113,7 @@ p {
   padding-top: 5px;
   margin-left: 1200px;
 }
-p a{
+main p a{
   text-decoration: none;
   color:#fff;
   
