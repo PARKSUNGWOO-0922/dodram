@@ -71,7 +71,11 @@ main .right-slides {
 /* main-icon */
 main .main-menu-list {
     background: transparent;
+    width: 1460px;
     display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
 }
 main .main-icon-box img{
     width: 168px;
@@ -83,18 +87,39 @@ main .main-recommend img , .main-gift-set img{
     width: 58px;
     height: 58px;
 }
-main .sub-gift-list li:nth-child(1){
+main .sub-gift-list li:first-child .sub-icon-box img{
+    /* position: absolute; */
     width: 535px;
-    height: 666px;
+     height: 666px;
+}
+.gift-sub-title {
+     display: flex;
 }
 main h1 , main p {
     text-align: center;
 }
 main .sub-menu-list {
     display: flex;
+    width: 1460px;
+    gap:10px;
 }
 main .sub-menu-wrap {
     display: flex;
+}
+.gift-sub-title {
+    position: relative;
+    left: 600px;
+    top: 90px;
+    display: flex;
+    width: 70px;
+    height: 58px;
+    color:#000;
+    border-radius: 50px;
+    padding-left: 40px;
+    outline: 1px solid #bbb;  
+}
+.gift-sub-title img {
+    width: 40px;
 }
 main .sub-menu-left-list li {
     position: relative;
@@ -181,8 +206,9 @@ main .side-menu.open .menu-list{
 /* chat */
 main .sub-menu-wrap {
     display: flex;
-    align-items: flex-start;
-    gap: 40px; /* 좌우간 간격 */
+     align-items: flex-start;
+    gap: 40px;  
+    
 }
 
 
