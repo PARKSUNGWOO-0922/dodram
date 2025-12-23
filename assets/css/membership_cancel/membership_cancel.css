@@ -51,13 +51,13 @@ main .user-psw {
     border-top: 2px solid #bbb
 }
 
-[type = "password"]{
+main [type = "password"]{
     margin-left: 53px;
     width: 180px;
     height: 30px;
 }
 
-[type="checkbox"] {
+main [type="checkbox"] {
     appearance: none;
     /* 기존 모습 숨기기 */
     position: relative;
@@ -70,7 +70,7 @@ main .user-psw {
 }
 
         /* 체크됐을 때 표시 (체크박스 안에 체크 기호 넣기) */
-[type="checkbox"]:checked::after {
+main [type="checkbox"]:checked::after {
     content: "";
     position: absolute;
     top: -6px;
