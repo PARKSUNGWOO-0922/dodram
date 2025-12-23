@@ -1,0 +1,93 @@
+@charset "utf-8";
+main * {
+    box-sizing: border-box;
+}
+main h1 {
+    border-bottom: 1px solid #aaa;
+}
+main .right-container,
+main .main-container,
+main .right-middle-title,
+main .inner-left,
+main .right-top-title,
+main .middle-title {
+    display: flex;
+}
+main .left-title{
+    margin-left: 250px;
+}
+main .right-container .right-top-title, main .right-middle-title{
+    height: 190px;
+    width: 1020px;
+    justify-content: space-between;
+    border:1px solid #ccc;
+}
+main .right-middle-title {
+    padding: 40px;
+    justify-content: space-evenly;
+}
+
+main .right-top-title{
+    width: 310px;
+    height: 190px;
+    padding: 30px 50px ;
+    text-align: center;
+}
+
+main .right-container {
+    margin: 0 auto;
+}
+main .right-middle-title .inner-left{
+    border-right: 1px solid #aaa;
+    padding-right: 90px;
+}
+main .right-middle-title .inner-left span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #aaa;
+    color: #fff;
+    text-align: center;
+    line-height: 50px; 
+}
+main .right-middle-title .inner-left  div img{
+    padding: 0px 20px;
+}
+main .right-middle-title .inner-right  li{
+    border-bottom: 1px solid #aaa;
+    padding: 4px 0 4px 0;
+    margin-left: 50px;
+}
+main .right-middle-title .inner-right  span{
+    display: inline-block;
+    margin-bottom: 5px;
+    padding-left: 50px;
+}
+main .right-container {
+    flex-direction: column;
+    
+}
+/* table */
+main .middle-title p {
+    text-align: center;
+    height: 10px;
+    line-height: 10px;
+    padding: 10px;
+}
+main .middle-content th  {
+  text-align: center;
+  padding: 12px 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+main .middle-content tr td{
+   padding: 80px;
+    text-align: center;
+}
+main .middle-content th, .middle-content td {
+  text-align: start;
+  padding: 12px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
