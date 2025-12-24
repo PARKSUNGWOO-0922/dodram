@@ -15,6 +15,20 @@ main .left-title p:hover{
     color:#E83828;
     font-weight: 700;
 }
+main .left-title h3::before{
+        content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;        
+    height: 2px;
+    background-color: #bbb;
+}
+main .left-title  h3{
+    position: relative;
+    padding-top: 16px;  
+    text-align: left;
+}
 main .cancel-guide-content {
     height: 310px;
     width: 1020px;
