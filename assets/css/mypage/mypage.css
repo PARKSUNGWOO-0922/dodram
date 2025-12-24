@@ -16,6 +16,10 @@ main .middle-title {
 main .left-title{
     margin-left: 250px;
 }
+main .left-title p:hover{
+    color:#E83828;
+    font-weight: 700;
+}
 main .right-container .right-top-title, main .right-middle-title{
     height: 190px;
     width: 1020px;
