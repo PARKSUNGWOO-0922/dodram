@@ -130,7 +130,7 @@ main .grade {
 }
 /* 등급혜택 */
 /* 전체 기준 */
-.grade-wrap {
+main .grade-wrap {
     position: relative;
     display: inline-block;
     height: 38px;
@@ -140,7 +140,7 @@ main .grade {
 }
 
 /* 버튼 */
-.grade-btn {
+main .grade-btn {
     background: #fff;
     border: 1px solid #ccc;
     padding: 6px 10px;
@@ -148,12 +148,12 @@ main .grade {
     font-size: 14px;
 }
 
-.grade-btn .arrow {
+main .grade-btn .arrow {
     margin-left: 4px;
 }
 
 /* 팝업 */
-.grade-popup {
+main .grade-popup {
     position: absolute;
     top: 100%;          /* 버튼 아래 */
     left: 0px;           /* 우측 정렬 */
@@ -165,14 +165,14 @@ main .grade {
     display: none;
     z-index: 100;
 }
-.grade-popup.active {
+main .grade-popup.active {
     display: block;
 }
 
 
 
 /* 팝업 헤더 */
-.popup-header {
+main .popup-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,7 +181,7 @@ main .grade {
     /* border-bottom: 1px solid #eee; */
 }
 
-.popup-header .close {
+main .popup-header .close {
     background: none;
     border: none;
     font-size: 14px;
@@ -189,30 +189,30 @@ main .grade {
 }
 
 /* 내용 */
-.popup-content {
+main .popup-content {
     list-style: none;
     
     padding: 10px;
     margin: 0;
 }
 
-.popup-content .title {
+main .popup-content .title {
     width: 80px;
     font-weight: 600;
 }
 
-.popup-content .desc {
+main .popup-content .desc {
     font-size: 13px;
     line-height: 10px;
     color: #333;
 }
 
-.popup-content .row {
+main .popup-content .row {
     display: flex;
     margin-bottom: 8px;
     border-bottom:1px solid #ccc;
 }
-.popup-content .rowl{
+main .popup-content .rowl{
     display: flex;
     margin-bottom: 8px;
     border: none;
