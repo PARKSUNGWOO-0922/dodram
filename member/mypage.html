@@ -48,9 +48,43 @@
                 <div class="right-top-title">
                     <div class="grade">
                         <img src="/assets/img/mypage/ico_member01.gif" alt="">
-                        <p>홍길동님의 회원등급은</p>
-                        <span>등급혜택보기</span>
+                        <p>홍길동님의 </p>
+                        <p>회원등급은 회원등급입니다.</p>
                     </div>
+                        <!-- 팝업시작 -->
+            <div class="grade-wrap">
+                            <button class="grade-btn" id="gradeBtn">
+                                등급혜택보기 ▾
+                            </button>
+
+                    <div class="grade-popup" id="gradePopup">
+                        <div class="popup-header">
+                            <h4>등급혜택 안내</h4>
+                            <button class="close" id="popupClose">✕</button>
+                        </div>
+
+                        <div class="popup-content">
+                            <div class="row">
+                                <p class="title">회원 등급</p>
+                                <p class="desc">회원등급</p>
+                            </div>
+                            <div  class="row">
+                                <p class="title">추가 할인</p>
+                                <p class="desc"><b>0원 이상 구매 시 상품 판매금액의</b><br><b> 0.0% 추가 할인</b></p>
+                            </div>
+                            <div  class="row">
+                                <p class="title">중복 할인</p>
+                                <p class="desc"><b>0원 이상 구매 시 상품 판매금액의</b><br><b> 0.0% 추가 할인</b></p>
+                            </div>
+                            <div  class="row rowl">
+                                <p class="title">추가 적립</p>
+                                <p class="desc">0원 이상 구매 시 구매금액당 3.0% <br><br>추가 적립</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+                        <!-- 팝업끝 -->
                     <div  class="cu">
                         <p><img src="/assets/img/mypage/icon_coupon.png" alt=""><b>쿠폰</b></p>
                         <span>0</span><span>장</span>
@@ -125,5 +159,20 @@
             </div>
       </div><!-- main-container -->
     </main>
+    <script>
+        const gradeBtn = document.getElementById("gradeBtn");
+        const gradePopup = document.getElementById("gradePopup");
+        const popupClose = document.getElementById("popupClose");
+
+        // 화살표(버튼) 클릭 → 열기/닫기
+        gradeBtn.addEventListener("click", () => {
+            gradePopup.classList.toggle("active");
+        });
+
+        // X 클릭 → 닫기
+        popupClose.addEventListener("click", () => {
+            gradePopup.classList.remove("active");
+        });
+</script>
   </body>
 </html>

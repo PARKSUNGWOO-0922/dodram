@@ -1,0 +1,354 @@
+@charset "utf-8";
+
+main body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+main {
+    width: 1520px;
+    margin: 0 auto;
+}
+main .top-image {
+    display: flex;
+    gap: 20px;
+}
+main .left-slider {
+    width: 990px;
+    height: 650px;
+    overflow: hidden;
+    border-radius: 30px;
+    display: flex;
+}
+main .left-slider img {
+    width: 990px;
+    height: 650px;
+}
+main .right-slider {
+    width: 440px;
+    height: 650px;
+    overflow: hidden;
+    border-radius: 30px;
+    display: flex;
+}
+main .right-slider img {
+    width: 440px;
+    height: 650px;
+}
+/* 슬라이드 */
+main .left-slides , .right-slides{
+    display: flex;
+    width: calc(100% * 5);
+    height: 100%;
+    animation-name:slideRoll;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+   }
+@keyframes slideRoll {
+     0% {transform: translateX(0);}
+    1.66% {transform: translateX(-20%);}
+    25.33% {transform: translateX(-20%);}
+    26.98% {transform: translateX(-40%);}
+    49.64% {transform: translateX(-40%);}
+    51.30% {transform: translateX(-60%);}
+    76.96% {transform: translateX(-60%);}
+    78.0% {transform: translateX(-80%);}
+    100% {transform: translateX(-80%);}
+}
+main .right-slides {
+    display: flex;
+}    
+/* main-icon */
+main .main-menu-list {
+    background: transparent;
+    width: 1460px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
+}
+main .main-icon-box img{
+    width: 168px;
+    height: 168px;
+}
+/*기존이미지 변경시 js 사용하던지 div로 태그변경해서 해볼것*/
+
+main .main-recommend img , .main-gift-set img{
+    width: 58px;
+    height: 58px;
+}
+main .sub-gift-set {
+    position: relative;
+}
+main .sub-gift-set h1 {
+    font-size: 45px;
+    font-weight: 630;
+}
+main .main-gift-set {
+    position: absolute;
+    left: 620px;
+    top: 10px;
+    padding: 5px;
+    height: 90px;
+}
+main .main-gift-set img{
+    top: -20px;
+   left: -60px;
+    position: absolute;
+   
+}
+main .main-gift-set img {
+    padding-top: 30px;
+}
+
+
+main .sub-gift-list li:first-child .sub-icon-box img{
+    /* position: absolute; */
+    width: 535px;
+     height: 666px;
+}
+main .sub-gift-list  li:nth-last-child(-n+3) .sub-icon-box img{
+    border-radius: 16px;
+    border:1px solid #888;
+    margin-top: 120px;
+}
+
+main h1 , main p {
+    text-align: center;
+}
+main .sub-menu-list {
+    display: flex;
+    width: 1460px;
+    gap:10px;
+}
+main .sub-menu-wrap {
+    display: flex;
+}
+.gift-sub-title {
+    position: relative;
+    left: 520px;
+    top: 110px;
+    padding:4px 16px;
+    display: flex;
+    gap:20px;
+    color:#000;
+    padding-left: 40px;
+}
+.gift-sub-title img {
+    width: 28px;
+    height: 28px;
+
+    
+}
+.gift-sub-image {
+    align-items: center;
+    display: flex;
+    gap:8px;
+    width: 88px;
+    height: 44px;
+    line-height: 44px;
+    outline: 1px solid #bbb;  
+    border-radius: 50px;
+}
+
+
+
+main .sub-menu-left-list li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 58px;
+    color:#000;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    padding-left: 40px;
+    outline: 1px solid #bbb;
+} 
+main .sub-menu-left-list li:nth-child(1) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 58px;
+    background: #a68bff;
+    color:#fff;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+
+main .sub-left-icon-box img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 48px;
+    height: 48px;
+}
+main .sub-icon-box img{
+    width: 290px;
+    height: 360px;
+}
+/* 사이드메뉴 */
+main .menu-list-container .menu-list {
+    position: relative;
+    top: 500px;
+    padding: 20px 20px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    height: 280px;
+    
+    transform: translateX(1662px);
+    /* transform:translateY(50px) */
+}
+main .menu-list .icon-box {
+    display: grid;
+    
+}
+main .side-menu {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: -240px;
+    width: 240px;
+    height: 100vh;
+    transform: translateX(100%); 
+    transition: transform 0.3s ease;
+}
+main .check-btn {
+    position: absolute;
+    top: 500px;
+    left:1635px;
+}
+main .side-menu.open {
+    transform: translateX(0);
+}
+main .side-menu.open .menu-list{
+   border:2px dotted red;
+}
+
+/* chat */
+main .sub-menu-wrap {
+    display: flex;
+     align-items: flex-start;
+    gap: 40px;  
+    
+}
+
+
+/* 사이드메뉴 end */
+main .menu-list  {
+    width: 50px;
+    height: 50px;
+}
+main .menu-list li:nth-of-type(1)   {
+    top: 10px;
+    left: 20px;
+}
+main .menu-list li:nth-of-type(2) .icon-box img  {
+    top: 10px;
+    left: 90px;
+}
+main .menu-list li:nth-of-type(3) .icon-box img  {
+    top: 10px;
+    left: 170px;
+}
+main .menu-list li:nth-of-type(4) .icon-box img  {
+    top: 90px;
+    left: 20px;
+}
+main .menu-list li:nth-of-type(5) .icon-box img  {
+    top: 90px;
+    left: 90px;
+}
+main .menu-list li:nth-of-type(6) .icon-box img  {
+    top: 170px;
+    left: 20px;
+    width: 100px;
+    height: 58px;
+}
+
+
+main .sub-gift-list {
+    height: 650px;
+    display: flex;
+   
+    gap:10px;
+    /* text-align: left; */
+}
+main .sub-gift-list span {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 14px;
+    border-radius: 8px;
+    background-color: #e83828;
+    color:#fff;
+}
+main .sub-gift-list sub {
+    font-size: 10px;
+    color:#888;
+}
+
+
+main .a_to_z {
+    display: flex;
+    gap: 20px;
+}
+main .a_to_z img {
+    margin-bottom: 20px;
+}
+
+main .notice  {
+    width: 695px;
+    height: 110px;
+    margin-bottom: 20px;
+    text-align: left;
+    background-color: #e83828;
+    color:#fff;
+    border-radius: 20px;
+    padding:30px 0 37px 60px
+}
+main .faq  {
+    width: 695px;
+    height: 110px;
+    margin-bottom: 20px;
+    background-color: #ffcf48;
+    color:#000;
+    border-radius: 20px;
+    padding:30px 0 37px 60px
+}
+
+
+/* 왼쪽 메뉴 영역 */
+main .sub-menu-left {
+    width: 260px;
+}
+
+/* ul은 높이를 고정하면 안됨 */
+main .sub-menu-left-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* 선물세트 돼지,글씨 가운데 정렬
+   그밑에 한돈 그림과 높이가 안맞음.
+ */
