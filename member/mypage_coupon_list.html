@@ -6,7 +6,7 @@
     <title>신선한 식탁을 즐기다, 도드람몰입니다.</title>
     <link rel="icon" href="/assets/img/main/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/mypage/mypage.css">
+    <link rel="stylesheet" href="/assets/css/mypage/mypage_claim.css">
     <link
       rel="stylesheet"
       as="style"
@@ -36,7 +36,7 @@
                 <h3>고객센터</h3>
                 <a href="mypage1_1faq.html"><p>- 1:1문의</p></a>
                 <h3>회원정보</h3>
-                <a href="mygage_change_info.html"><p>- 회원정보 변경</p></a>
+                <a href="mypage_change_info.html"><p>- 회원정보 변경</p></a>
                 <a href="delete_account.html"><p>- 회원탈퇴</p></a>
                 <a href="mypage_dilivery_addr.html"><p>- 배송지 관리</p></a>
                 <h3>나의 상품문의</h3>
@@ -98,60 +98,58 @@
                         <span>0</span><span>원</span>
                     </div>
                 </div><!-- right-top-title -->
-                <div class="middle-title">
-                    <h3>진행중인주문</h3>
-                    <p>최근 30일이내 진행중인 정보입니다.</p>
-                </div>
-                <div class="right-middle-title">
-          
-                    <div class="inner-left">
-                        <div>
-                            <p>입금대기</p><span>0</span>
-                            <img src="/assets/img/mypage/arrow.png" alt="진행화살표">
-                        </div>
-                        <div>
-                            <p>결제완료</p><span>0</span>
-                            <img src="/assets/img/mypage/arrow.png" alt="진행화살표">
-                        </div>
-                        <div>
-                            <p>상품준비중</p><span>0</span>
-                            <img src="/assets/img/mypage/arrow.png" alt="진행화살표">
-                        </div>
-                        <div>
-                            <p>배송중</p><span>0</span>
-                            <img src="/assets/img/mypage/arrow.png" alt="진행화살표">
-                        </div>
-                        <div>
-                            <p>배송완료</p><span>0</span>
-                            <img src="/assets/img/mypage/arrow.png" alt="진행화살표">
-                        </div>
-                        <div>
-                            <p>구매확정</p><span>0</span>
-                            
-                        </div>
-                    </div>
-                    <ul class="inner-right">
-                        <li>취소 <span>0건</span></li>
-                        <li>교환 <span>0건</span></li>
-                        <li>반품 <span>0건</span></li>
-                    </ul>
-                </div><!--right-middle-title -->
-               
-                    <div class="middle-title" >
-                        <h3>최근주문정보</h3>
-                        <p>최근 30일이내 진행중인 정보입니다.</p>
-                    </div>
+        <div class="order-search">
+  <h3 class="title">쿠폰</h3>
+
+  <div class="search-box">
+    <span class="label">조회기간</span>
+
+    <div class="btn-group">
+      <button>오늘</button>
+      <button class="active">7일</button>
+      <button>15일</button>
+      <button>1개월</button>
+      <button>3개월</button>
+      <button>1년</button>
+    </div>
+
+    <input type="date" value="2025-12-22">
+    <span class="tilde">~</span>
+    <input type="date" value="2025-12-29">
+
+    <button class="search-btn">
+      조회 <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div><!-- //search-box -->
+</div><!--// order-search -->
+                    <!-- 탭버튼시작 -->
+                     <nav class="claim-tabs">
+                    <a href="mypage_coupon_list.html" class="tab active">
+                        사용 가능
+                    </a>
+                    <a href="mypage_coupon_status.html" class="tab">
+                        사용 불가
+                    </a>
+                    </nav>
+                    <!-- 탭버튼끝 -->
+                <p class="date-range-text" id="dateRangeText"></p>
+                
+                    <!-- <div class="middle-title" >
+                        <h3>쿠폰내역 </h3>
+                        
+                    </div> -->
                     <table class="middle-content">
                         <tr>
-                            <th>날짜/주문번호</th>
-                            <th>상품명/옵션</th>
-                            <th>상품금액/수량</th>
-                            <th>주문상태</th>
-                            <th>확인리뷰</th>
+                            <th>쿠폰명</th>
+                            <th>혜택</th>
+                            <th>사용조건</th>
+                            <th>제한조건</th>
+                            <th>유효기간</th>
+                            <th>발급일</th>
                         </tr>
                         
                         <tr>
-                            <td colspan="5">조회내역이 없습니다</td>
+                            <td colspan="6">조회내역이 없습니다</td>
                         </tr>
                         
                     </table>
@@ -173,6 +171,72 @@
         popupClose.addEventListener("click", () => {
             gradePopup.classList.remove("active");
         });
+        //주문조회시작
+        // =========================
+// 1. 요소 선택
+// =========================
+const periodButtons = document.querySelectorAll(".btn-group button");
+const startDateInput = document.querySelectorAll('input[type="date"]')[0];
+const endDateInput = document.querySelectorAll('input[type="date"]')[1];
+
+// 오늘 날짜
+const today = new Date();
+
+// yyyy-mm-dd 형태로 변환 함수
+function formatDate(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+// =========================
+// 2. 버튼 클릭 이벤트
+// =========================
+periodButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // ① active 처리
+    periodButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    // ② 날짜 계산
+    const text = btn.innerText;
+    const startDate = new Date(today);
+
+    if (text === "오늘") {
+      // 그대로
+    } else if (text === "7일") {
+      // periodText.textContent = "최근 7일간의 쿠폰내역";
+      startDate.setDate(today.getDate() - 7);
+    } else if (text === "15일") {
+      startDate.setDate(today.getDate() - 15);
+    } else if (text === "1개월") {
+      startDate.setMonth(today.getMonth() - 1);
+    } else if (text === "3개월") {
+      startDate.setMonth(today.getMonth() - 3);
+    } else if (text === "1년") {
+      startDate.setFullYear(today.getFullYear() - 1);
+    }
+
+    // input에 반영
+    startDateInput.value = formatDate(startDate);
+    endDateInput.value = formatDate(today);
+    updatePeriodTextByButton(text);
+  });
+});
+        //주문조회 끝
+        // 초기 표시 (페이지 로드시)
+// 7일 전 날짜 계산
+const defaultStartDate = new Date(today);
+defaultStartDate.setDate(today.getDate() - 7);
+
+// input 값 설정
+startDateInput.value = formatDate(defaultStartDate);
+endDateInput.value = formatDate(today);
+
+dateRangeText.innerText =
+  `${startDateInput.value} ~ ${endDateInput.value} 까지의 쿠폰내역`;
 </script>
   </body>
 </html>
