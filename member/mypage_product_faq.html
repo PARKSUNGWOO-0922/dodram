@@ -6,7 +6,7 @@
     <title>신선한 식탁을 즐기다, 도드람몰입니다.</title>
     <link rel="icon" href="/assets/img/main/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/mypage/mypage_orderlist_diliversearch.css">
+    <link rel="stylesheet" href="/assets/css/mypage/mypage_claim.css">
     <link
       rel="stylesheet"
       as="style"
@@ -45,62 +45,11 @@
                 <a href="mypage_product_review.html"><p>- 나의 상품후기</p></a>
             </div>
             <div class="right-container">
-                <div class="right-top-title">
-                    <div class="grade">
-                        <img src="/assets/img/mypage/ico_member01.gif" alt="">
-                        <p>홍길동님의 </p>
-                        <p>회원등급은 회원등급입니다.</p>
-                    </div>
-                        <!-- 팝업시작 -->
-            <div class="grade-wrap">
-                            <button class="grade-btn" id="gradeBtn">
-                                등급혜택보기 ▾
-                            </button>
+                
+               
+                <h3 class="title">나의 상품문의</h3>
 
-                    <div class="grade-popup" id="gradePopup">
-                        <div class="popup-header">
-                            <h4>등급혜택 안내</h4>
-                            <button class="close" id="popupClose">✕</button>
-                        </div>
-
-                        <div class="popup-content">
-                            <div class="row">
-                                <p class="title">회원 등급</p>
-                                <p class="desc">회원등급</p>
-                            </div>
-                            <div  class="row">
-                                <p class="title">추가 할인</p>
-                                <p class="desc"><b>0원 이상 구매 시 상품 판매금액의</b><br><b> 0.0% 추가 할인</b></p>
-                            </div>
-                            <div  class="row">
-                                <p class="title">중복 할인</p>
-                                <p class="desc"><b>0원 이상 구매 시 상품 판매금액의</b><br><b> 0.0% 추가 할인</b></p>
-                            </div>
-                            <div  class="row rowl">
-                                <p class="title">추가 적립</p>
-                                <p class="desc">0원 이상 구매 시 구매금액당 3.0% <br><br>추가 적립</p>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-
-                        <!-- 팝업끝 -->
-                    <div  class="cu">
-                        <p><img src="/assets/img/mypage/icon_coupon.png" alt=""><b>쿠폰</b></p>
-                        <span>0</span><span>장</span>
-                    </div>
-                    <div  class="mi">
-                        <p><img src="/assets/img/mypage/icon_mileage.png" alt=""><b>마일리지</b></p>
-                        <span>0</span><span>원</span>
-                    </div>
-                    <div   class="bl">
-                        <p><img src="/assets/img/mypage/icon_balance.png" alt=""><b>예치금</b></p>
-                        <span>0</span><span>원</span>
-                    </div>
-                </div><!-- right-top-title -->
-        <div class="order-search">
-  <h3 class="title">주문목록/배송조회</h3>
-
+                <div class="order-search">
   <div class="search-box">
     <span class="label">조회기간</span>
 
@@ -122,24 +71,21 @@
     </button>
   </div><!-- //search-box -->
 </div><!--// order-search -->
-
-               
-                    <div class="middle-title" >
-                        <h3>주문목록/배송조회 내역 총<span>0</span>건 </h3>
-                        
-                    </div>
+                  
+                <p class="date-range-text" id="dateRangeText"></p>
+                
+                 
                     <table class="middle-content">
                         <tr>
-                            <th>날짜/주문번호</th>
-                            <th>배송지</th>
-                            <th>상품명/옵션</th>
-                            <th>상품금액/수량</th>
-                            <th>주문상태</th>
-                            <th>확인/리뷰</th>
+                            <th>문의날짜</th>
+                            <th>카테고리</th>
+                            <th>제목</th>
+                            <th>문의상태</th>
+                            
                         </tr>
                         
                         <tr>
-                            <td colspan="6">조회내역이 없습니다</td>
+                            <td colspan="6">게시글이 존재하지않습니다.</td>
                         </tr>
                         
                     </table>
@@ -148,21 +94,6 @@
       </div><!-- main-container -->
     </main>
     <script>
-        const gradeBtn = document.getElementById("gradeBtn");
-        const gradePopup = document.getElementById("gradePopup");
-        const popupClose = document.getElementById("popupClose");
-
-        // 화살표(버튼) 클릭 → 열기/닫기
-        gradeBtn.addEventListener("click", () => {
-            gradePopup.classList.toggle("active");
-        });
-
-        // X 클릭 → 닫기
-        popupClose.addEventListener("click", () => {
-            gradePopup.classList.remove("active");
-        });
-        //주문조회시작
-        // =========================
 // 1. 요소 선택
 // =========================
 const periodButtons = document.querySelectorAll(".btn-group button");
@@ -197,6 +128,7 @@ periodButtons.forEach(btn => {
     if (text === "오늘") {
       // 그대로
     } else if (text === "7일") {
+      // periodText.textContent = "최근 7일간의 쿠폰내역";
       startDate.setDate(today.getDate() - 7);
     } else if (text === "15일") {
       startDate.setDate(today.getDate() - 15);
@@ -211,9 +143,21 @@ periodButtons.forEach(btn => {
     // input에 반영
     startDateInput.value = formatDate(startDate);
     endDateInput.value = formatDate(today);
+    dateRangeText.innerText = `${startDateInput.value} ~ ${endDateInput.value} 까지의 문의내역`;
   });
 });
         //주문조회 끝
+        // 초기 표시 (페이지 로드시)
+// 7일 전 날짜 계산
+const defaultStartDate = new Date(today);
+defaultStartDate.setDate(today.getDate() - 7);
+
+// input 값 설정
+startDateInput.value = formatDate(defaultStartDate);
+endDateInput.value = formatDate(today);
+
+dateRangeText.innerText =
+  `${startDateInput.value} ~ ${endDateInput.value} 까지의 1:1문의내역`;
 </script>
   </body>
 </html>
