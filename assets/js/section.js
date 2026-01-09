@@ -42,4 +42,7 @@ menuImages.forEach(img => {
       toggled = false;
     }
   });
+  console.log('dataset'+img.dataset);
+  console.log('default'+img.dataset.default); // "default.png"
+   console.log('hover'+img.dataset.hover);   // "hover.png"
 });
