@@ -7,7 +7,7 @@
     <link rel="icon" href="/assets/img/main/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/layout.css" />
     <link rel="stylesheet" href="/assets/css/mypage/mypage_claim.css">
-    <link rel="stylesheet" href="/assets/css/mypage/mypage_change_info.css">
+    <link rel="stylesheet" href="/assets/css/mypage/mypage_change_info_sub.css">
     <link
       rel="stylesheet"
       as="style"
@@ -20,11 +20,12 @@
 
   <body>
     <main>
-      <h1 style="text-align: center">마이페이지</h1>
+      <!-- <h1 style="text-align: center">마이페이지</h1> -->
+      <h1 style="text-align: center">회원정보 변경</h1>
 
       <div class="main-container">
           <div class="left-title">
-                <a href="index.html">HOME></a>
+                <a href="index.html">HOME>마이페이지>정보수정</a>
                 <h3>쇼핑정보</h3>
                 <a href="mypage_orderlist_diliversearch.html"><p>- 주문목록/배송조회</p></a>
                 <a href="mypage_claim_list.html"><p>- 취소/반품/교환내역</p></a>
@@ -47,50 +48,58 @@
             </div>
 
 <div class="container">
-    <div class="title">회원정보 변경</div>
+    <!-- <div class="title">회원정보 변경</div> -->
 
-    <div class="box">
-        <div class="form-row">
-            <span>아이디</span>
-            <span class="user-id" id="userId">Dodram</span>
+        <h3 class="section-title">기본정보</h3>
 
-            <span>비밀번호</span>
-            <input type="password" id="password" placeholder="1234">
-        </div>
-    </div>
+    <table class="info-table">
+        <tr>
+            <th>아이디</th>
+            <td class="readonly">hong</td>
+        </tr>
 
+        <tr>
+            <th>비밀번호</th>
+            <td>
+                <div class="password-box">
+                    <div>
+                        <label>새 비밀번호</label>
+                        <input type="password">
+                    </div>
+                    <div>
+                        <label>새 비밀번호 확인</label>
+                        <input type="password">
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <th>이름</th>
+            <td>
+                <input type="text" value="홍길동">
+            </td>
+        </tr>
+
+        <tr>
+            <th>이메일</th>
+            <td>
+                <input type="email" value="hong@naver.com">
+            </td>
+        </tr>
+
+        <tr>
+            <th>휴대폰번호</th>
+            <td>
+                <input type="text" value="01012345678">
+            </td>
+        </tr>
+    </table>
     <div class="btn-area">
-        <button onclick="cancel()">취소</button>
-        <button class="btn-confirm" onclick="checkPassword()">인증하기</button>
+        <button >취소</button>
+        <button class="btn-confirm">정보수정</button>
     </div>
 </div>
-
-<script>
-function checkPassword() {
-    const password = document.getElementById("password").value;
-
-    if(password === "") {
-        alert("비밀번호를 입력하세요.");
-        return;
-    }
-
-    // 예제용 비밀번호 (실제 서비스에서는 서버에서 검증)
-    const correctPassword = "1234";
-
-    if(password === correctPassword) {
-        alert("인증 성공!");
-         location.href = "mypage_change_info_sub.html"; // 다음 페이지 이동
-    } else {
-        alert("비밀번호가 틀렸습니다.");
-    }
-}
-
-function cancel() {
-    if(confirm("취소하시겠습니까?")) {
-        history.back(); // 이전 페이지로
-    }
-}
-</script>
 
 </body>
 </html>
