@@ -107,6 +107,7 @@ main .right-slides {
 
 /* main-icon */
 main .main-menu-list {
+    background: transparent;
     width: 1460px;
     display: flex;
     justify-content: space-between;
@@ -120,19 +121,11 @@ main .main-icon-box img {
 }
 
 /*기존이미지 변경시 js 사용하던지 div로 태그변경해서 해볼것*/
-/* 추천상품 정렬 */
-main .main-recommend {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-/* 추천상품 정렬끝 */
 
 main .main-recommend img,
 .main-gift-set img {
-    width: 60px;
-    height: 70px;
+    width: 58px;
+    height: 58px;
 }
 
 main .sub-gift-set {
@@ -212,25 +205,12 @@ main .sub-menu-wrap {
 .gift-sub-image {
     align-items: center;
     display: flex;
-    justify-content: center;
-    /* 가운데 정렬 추가1*/
     gap: 8px;
     width: 88px;
     height: 44px;
     line-height: 44px;
     outline: 1px solid #bbb;
     border-radius: 50px;
-}
-/* 가운데 정렬 추가2*/
-.gift-sub-image>div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-/*  가운데 정렬 추가2끝*/
-.gift-sub-image>div>span {
-    font-size: 16px;
-    font-weight: 700;
 }
 
 
